@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+  background: none;
+  font-family: Verdana, sans-serif;
+}
+body{
+    width:80%;
+    margin: auto;
+}
+</style>
+</head>
+
+<h3>2017 Final Selection statistics</h3>
+
+<p>
+  To give potential volunteers a sense which SVs get selected, we provide summary statistics on the critical selection criteria
+  from the previous year.
+</p>
+
+<h4>Student status</h4>
+<svg id="status-summary"></svg>
+
+<h4>University country</h4>
+<svg id="country"></svg>
+
+<h4>Presentation</h4>
+<svg id="presenting"></svg>
+
+<h4>Previous SV</h4>
+<svg id="prev-sv"></svg>
+
+<script src="/js/d3.v4.min.js"></script>
+<script>
+    console.log(1)
+function barChart(sel, url) {
+
+    var width = 350;
+    var height = 250;
+    var margin = {
+        top: 10,
+        bottom: 20,
+        left: 90,
+        right: 10
+    };
+    var x = d3.scaleLinear().range([0, width - margin.left - margin.right]);
+    var y = d3.scaleBand().range([height - margin.top - margin.bottom, 0]);
+
+    var chart = d3.select(sel)
+        .attr('width', width)
+        .attr('height', height)
+        .append('g')
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    d3.json(url, function (data) {
+        data.sort(function (x, y) {
+            return d3.ascending(x.count, y.count);
+        });
+
+        // finalize scales
+        x.domain([0, d3.max(data, function (d) {
+            return d.count;
+        })]);
+        y.domain(data.map(function (d) {
+            return d.key;
+        }));
+
+        // add bars
+        chart.selectAll('.bar').data(data)
+            .enter().append('rect')
+            .attr('class', 'bar')
+            .attr('x', 0)
+            .attr('y', function (d) {
+                return y(d.key);
+            })
+            .attr('width', function (d) {
+                return x(d.count);
+            })
+            .attr('height', y.bandwidth())
+            .attr('stroke', 'grey')
+            .attr('fill', 'darkgrey');
+
+        // add the x Axis
+        chart.append("g")
+            .attr("transform", "translate(0," + (height - margin.bottom - margin.top) + ")")
+            .call(d3.axisBottom(x));
+
+        // add the y Axis
+        chart.append("g")
+            .call(d3.axisLeft(y));
+    });
+}
+
+  barChart('#status-summary', '../sv_stats/status_dist.json');
+  barChart('#country', '../sv_stats/country_dist.json');
+  barChart('#presenting', '../sv_stats/presenter_dist.json');
+  barChart('#prev-sv', '../sv_stats/prevsv_dist.json');
+</script>
+</html>

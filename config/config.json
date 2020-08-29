@@ -1,0 +1,70 @@
+[
+    {  "_comment": "on Jun 30 2018: need to update: sv_room, and perhaps sv_meeting1 & sv_meeting2", 
+        "year": 2018,
+        "location": "Berlin",
+        "vis_week": "October 21 - 26",
+        "conf_start_date": "Saturday, October 20th", 
+        "sv_room": "For this year, we use Room XXX ...",
+        "chairs":[
+            {"name": "Thomas Torsney-Weir", "affiliation": "University of Vienna"},
+            {"name": "John Wenskovitch", "affiliation": "Virginia Tech"},
+            {"name": "Tim Luciani", "affiliation": "University of Illinois at Chicago"},
+            {"name": "Fumeng Yang", "affiliation": "Brown University"},
+            {"name": "Tim Gerrits", "affiliation": "University of Magdeburg"}
+        ],
+        "apply_link":"https://goo.gl/forms/O0O2Zfeq6MDcYcU83",
+        "vis_cur_logo_link":"img/vis_logo_2018.jpg",
+        "shirt_year":"third",
+        "sv_meeting1": "Saturday, October 20th at 8:15 PM",
+        "sv_meeting2": "Sunday, October 21st at 6:15 PM",
+        "title_daily_supervisor": "day captain",
+        "t_shirt_link": "2018_tshirt-small.png",
+        "t_shirt_small_link": "img/2018_tshirt-small.png",
+        "t_shirt_due": "June 15", 
+        "t_shirt_subject": "VIS18 SV Shirt Contest - FIRSTNAME LASTNAME"
+    },
+    {
+        "_comment": "example for 2019", 
+        "year": 2019,
+        "location": "Vancouver",
+        "vis_week": "October 20 - 25",
+        "conf_start_date": "Saturday, October 19th", 
+        "sv_room": "For this year, we use Room XXX ...",
+        "chairs":[
+            {"name": "Tim Luciani", "affiliation": "University of Illinois at Chicago"},
+            {"name": "Fumeng Yang", "affiliation": "Brown University"},
+            {"name": "Tim Gerrits", "affiliation": "University of Magdeburg"},
+            {"name": "Bon Adriel A.", "affiliation": "University of Calgary"}
+        ],
+        "apply_link":"https://forms.gle/Qs8YPsP6hfJo2hGQ8",
+        "sv_meeting1": "Saturday, October 19th at 8:15 PM",
+        "sv_meeting2": "Sunday, October 20th at 6:15 PM",
+        "title_daily_supervisor": "day captain",
+        "t_shirt_link": "img/2018_tshirt-small.png",
+        "t_shirt_small_link": "img/2018_tshirt-small.png",
+        "t_shirt_due": "June 15", 
+        "t_shirt_subject": "VIS19 SV Shirt Contest - FIRSTNAME LASTNAME"
+    },
+    {
+        "_comment": "example for 2020",
+        "year": 2020,
+        "location": "Virtual Conference - Salt Lake City",
+        "vis_week": "October 25 - 30",
+        "conf_start_date": "Saturday, October 24th",
+        "sv_room": "For this year, we use Room XXX ...",
+        "chairs":[
+            {"name": "Tim Luciani", "affiliation": "University of Illinois at Chicago"},
+            {"name": "Fumeng Yang", "affiliation": "Brown University"},
+            {"name": "Tim Gerrits", "affiliation": "University of Magdeburg"},
+            {"name": "Bon Adriel A.", "affiliation": "University of Calgary"}
+        ],
+        "apply_link":"https://forms.gle/WHh7W4ApNQM2pYB48",
+        "sv_meeting1": "Saturday, October 24th at 8:15 PM",
+        "sv_meeting2": "Sunday, October 25th at 6:15 PM",
+        "title_daily_supervisor": "day captain",
+        "t_shirt_link": "img/2019_tshirt-small.png",
+        "t_shirt_small_link": "img/2019_tshirt-small.png",
+        "t_shirt_due": "August 15",
+        "t_shirt_subject": "VIS20 SV Shirt Contest - FIRSTNAME LASTNAME"
+    }
+]
